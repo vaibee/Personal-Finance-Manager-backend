@@ -1,4 +1,5 @@
 package com.finance.personal_finance_manager.service;
+ hello test
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -56,7 +57,7 @@ public class AiInsightService {
             Map<String, Object> response =
                     restTemplate.postForObject(url, entity, Map.class);
 
-            // Extract AI text:
+
             Map firstCandidate = ((List<Map>) response.get("candidates")).get(0);
             Map contentMap = (Map) firstCandidate.get("content");
             List<Map> parts = (List<Map>) contentMap.get("parts");
